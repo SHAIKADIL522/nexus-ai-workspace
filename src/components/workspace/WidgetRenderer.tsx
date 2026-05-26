@@ -41,7 +41,7 @@ function WidgetCard({ widget, index }: { widget: Widget; index: number }) {
   } else if (widget.type === 'stock') {
     props = { stocks: (widget.data as { stocks?: unknown[] })?.stocks ?? widget.data };
   } else if (typeof widget.data === 'object' && widget.data !== null && !Array.isArray(widget.data)) {
-    props = widget.data as Record<string, unknown>;
+    props = widget.data as unknown as Record<string, unknown>;
   } else {
     props = { content: widget.data, title: widget.title };
   }
