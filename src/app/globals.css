@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+*, *::before, *::after { box-sizing: border-box; }
+
+:root {
+  --bg: #050816;
+  --border: rgba(255,255,255,0.08);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.3); border-radius: 999px; }
+.custom-scrollbar::-webkit-scrollbar { width: 3px; }
+.custom-scrollbar::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.06); border-radius: 999px; }
+
+.font-display { font-family: 'Syne', sans-serif !important; }
+.widget-card { transition: transform 0.25s ease; }
+.widget-card:hover { transform: translateY(-2px); }
